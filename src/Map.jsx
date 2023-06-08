@@ -1,7 +1,8 @@
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import "leaflet/dist/leaflet.css";
 import { useMap } from 'react-leaflet/hooks'
-import { useState } from 'react';
+import { Icon } from 'leaflet';
+import marker from '../public/images/Map-Pointer.svg'
 
 const Map = ({coordinates}) => {
 
@@ -12,6 +13,12 @@ const Map = ({coordinates}) => {
         return null
     }
 
+    const myIcon = new Icon({
+        iconUrl: marker,
+        iconSize: [50,50]
+    })
+       
+
   return (
         
         <MapContainer center={position} zoom={15} scrollWheelZoom={true} zoomControl={false}>
@@ -20,7 +27,7 @@ const Map = ({coordinates}) => {
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={position}>
+            <Marker position={position} icon={myIcon}>
                 <Popup>I'm here 😀</Popup>
             </Marker>
         </MapContainer>
