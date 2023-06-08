@@ -17,7 +17,7 @@ main {
 
 .header {
   height: 35%;
-  background-image: url("./images/pattern-bg-mobile.png");
+  background-image: url("./pattern-bg-mobile.png");
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -121,7 +121,7 @@ main {
   }
 
   .header {
-    background-image: url("./images/pattern-bg-desktop.png");
+    background-image: url("./pattern-bg-desktop.png");
     padding-top: 2rem;
     gap: 2rem;
   }
