@@ -6,7 +6,7 @@ import Form from './Form'
 
 function App() {
 
-  const [ipAddress, setIpAddress] = useState('1.1.1.1')
+  const [ipAddress, setIpAddress] = useState('')
   const [addressInfo, setAddressInfo] = useState('')
   const [coordinates, setCoordinates] = useState()
     
